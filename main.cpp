@@ -43,6 +43,22 @@ int main()
     sumar2(arr, 5);
 }*/
 
+int main()
+{
+    int arr[4] = {1, 2, 3, 4};
+    int swap;
+    int i = 0;
+    /*int arr[i];*/
+    int tam = 4;
+    /*int arr[tam];*/
+    if(tam > 0){
+        arr[i].swap(arr[tam]);
+        i++;
+        tam--;
+        cout << arr[i] << endl;
+    }
+}
+
 /*int invertir(int arr[], int tam)
 {
     int v = tam / 2;
