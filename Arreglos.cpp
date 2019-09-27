@@ -43,50 +43,34 @@ int main()
     sumar2(arr, 5);
 }*/
 
-int main()
-{
-    int arr[4] = {1, 2, 3, 4};
-    int swap;
-    int i = 0;
-    /*int arr[i];*/
-    int tam = 4;
-    /*int arr[tam];*/
-    if(tam > 0){
-        arr[i].swap(arr[tam]);
-        i++;
-        tam--;
-        cout << arr[i] << endl;
-    }
+int swap(int &x, int &y){
+int a = x;
+x = y;
+y = a;
 }
 
 /*int invertir(int arr[], int tam)
 {
-    int v = tam / 2;
-    tam -= 1;
-    for(int i = 0; i < v; i++){
-        int c = arr[i];
-        arr[i] = arr[tam];
-        arr[tam--] = c;
+    for(int i = 0; i < tam / 2; i++){
+        swap(arr[i], arr[tam-1-i]);
+    }
+}*/
+
+int invertir2(int arr[], int tam)
+{
+    int i = 0;
+    while(i < tam / 2){
+        swap(arr[i++], arr[tam-1-i]);
+        return invertir2(arr[i], arr[tam-1+i]);
     }
 }
 
 int main()
 {
     int arr[4] = {1, 2, 3, 4};
-    invertir(arr, 4);
+
     imprimir(arr, 4);
-}*/
-
-/*int invertir2(int arr[], int tam)
-{
-    if(tam > 0){
-        cout << arr[tam - 1] << endl;
-        invertri2(arr, 4);
-    }
+    invertir2(arr, 4);
+    imprimir(arr, 4);
 }
 
-int main()
-{
-    int arr[4] = {1, 2, 3, 4};
-    invertir2(arr, 4);
-}*/
