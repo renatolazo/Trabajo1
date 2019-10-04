@@ -54,22 +54,47 @@ void swap(int &x, int &y)
     y = tmp;
 }
 
-int invertir(int *arr, int tam)
-{
-    if(tam/2 == 0){
-        cout << *arr << " ";
-    }
-    else{
-        swap(*arr, arr[tam-1]);
-        *arr++;
-        tam--;
+/*int invertir(int *arr, int tam)   /// con * (contenido) , sin * (posicion)
+{ /// [ 1   2   3   4   5   ]
+  /// [ 1   2   3   4   ]
+  ///           arr
+  ///      ptr
+    int *fin = arr + tam - 1;
+    while( arr < fin ){
+        swap(*arr, *fin);
+        arr++;
+        fin--;
     }
 }
 
 int main()
 {
-    int x[5] = {1, 2, 3, 4, 5}
+    int x[5] = {1, 2, 3, 4, 5};
     imprimirArreglos(x, 5);
     invertir(x, 5);
     imprimirArreglos(x, 5);
+}*/
+
+int invertir2(int *arr, int tam)
+{
+    int *fin = arr + tam - 1;
+    if(arr < fin){
+        swap(*arr, *fin);
+        arr++;
+        fin--;
+    }
+    else{
+        return invertir2(arr, *fin);
+        arr++;
+        fin--;
+    }
 }
+
+int main()
+{
+    int x[5] = {1, 2, 3, 4, 5};
+    imprimirArreglos(x, 5);
+    invertir2(x, 5);
+    imprimirArreglos(x, 5);
+}
+
