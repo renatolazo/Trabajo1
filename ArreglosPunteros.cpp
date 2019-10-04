@@ -56,9 +56,13 @@ void swap(int &x, int &y)
 
 int invertir(int *arr, int tam)
 {
-    if(tam == 1){
-
-        swap(*arr);
+    if(tam/2 == 0){
+        cout << *arr << " ";
+    }
+    else{
+        swap(*arr, arr[tam-1]);
+        *arr++;
+        tam -= 2;
     }
 }
 
