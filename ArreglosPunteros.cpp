@@ -69,7 +69,7 @@ int invertir(int *arr, int tam)
 int main()
 {
     int x[5] = {1, 2, 3, 4, 5}
-    imprimirArreglos(arr, 5);
-    invertir(arr, 5);
-    imprimirArreglos(arr, 5);
+    imprimirArreglos(x, 5);
+    invertir(x, 5);
+    imprimirArreglos(x, 5);
 }
