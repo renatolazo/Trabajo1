@@ -62,7 +62,7 @@ int invertir(int *arr, int tam)
     else{
         swap(*arr, arr[tam-1]);
         *arr++;
-        tam -= 2;
+        tam--;
     }
 }
 
