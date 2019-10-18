@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//Base de Datos de "Mi Biblioteca Personal
+//Base de Datos de "Mi Biblioteca"
 //En este programa se intenta crear un software que permita a una persona buscar un libro, la
 //persona podra usar filtros para poder encontrar mas rapido el libro deseado, ademas el usuario tendra
 //la posibilidad de tener en una biblioteca virtual los libros que haya adquirido anteriormente
