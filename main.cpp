@@ -2,32 +2,10 @@
 
 using namespace std;
 
-/*class Persona
-{
-private:
-    int edad;
-    string nombre;
-public:
-    Persona(int, string);
-    void leer();
-    void correr();
-};
-
-Persona::Persona(int _edad, string _nombre)
-{
-    edad = _edad;
-    nombre = _nombre;
-}
-
-void Persona::leer()
-{
-    cout << "Soy " << nombre << " y estoy leyendo un libro" << endl;
-}
-
-void Persona::correr()
-{
-    cout << "Soy " << nombre << " y estoy corriendo una maraton" << endl;
-}*/
+//Base de Datos de "Mi Biblioteca Personal
+//En este programa se intenta crear un software que permita a una persona buscar un libro, la
+//persona podra usar filtros para poder encontrar mas rapido el libro deseado, ademas el usuario tendra
+//la posibilidad de tener en una biblioteca virtual los libros que haya adquirido anteriormente
 
 class Libro
 {
