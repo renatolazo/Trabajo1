@@ -7,6 +7,53 @@ using namespace std;
 //persona podra usar filtros para poder encontrar mas rapido el libro deseado, ademas el usuario tendra
 //la posibilidad de tener en una biblioteca virtual los libros que haya adquirido anteriormente
 
+int main()
+{
+    int n, opcion;
+
+    do
+    {
+        cout << "\n   1. Ingresar" << endl;
+        cout << "\n   2. Calcular la mitad de un numero entero" << endl;
+        cout << "\n   3. Calcular el cuadrado de un numero entero" << endl;
+        cout << "\n   4. Salir" << endl;
+        cout << "\n\n   Introduzca opcion (1-4): " << endl;
+
+        scanf( "%d", &opcion );
+
+        /* Inicio del anidamiento */
+
+        switch ( opcion )
+        {
+            case 1: cout << "\n   Introduzca su nombre " << endl;
+                    string a;
+                    cin >> a;
+                    if (a == "Renato")
+                        cout << "Bienvenido Renato" << endl;
+                    else
+                        cout << "Ese nombre no esta registrado en la base de datos" << endl;
+                    break;
+
+            case 2: cout << "\n   Introduzca un numero entero " << endl;
+                    int b;
+                    cin >> b;
+                    cout << "\n   La mitad de " << b << " es " << b / 2 << endl;
+                    break;
+
+            case 3: cout << "\n   Introduzca un numero entero " << endl;
+                    int c;
+                    cin >> c;
+                    cout << "\n   El cuadrado de " << c << " es " << pow( c, 2 ) << endl;
+                    break;
+         }
+
+         /* Fin del anidamiento */
+
+    } while ( opcion != 4 );
+
+    return 0;
+}
+
 class Libro
 {
 private:
@@ -27,6 +74,7 @@ private:
     string nombre;
 public:
     Persona(int , string);
+    int ObtenerEdad();
     void leer();
     void obtener();
 };
@@ -74,6 +122,11 @@ void Persona::leer()
 void Persona::obtener()
 {
     cout << "La persona de edad " << edad << " obtuvo el libro" << endl;
+}
+
+int Persona::ObtenerEdad()
+{
+    return edad;
 }
 
 Libreria::Libreria(string _calle, string _ciudad)
