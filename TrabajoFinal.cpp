@@ -94,22 +94,31 @@ void Libreria::lugar()
 
 int main()
 {
+    int p1_int;
+    string p1_str;
+    cout << "escriba su edad y su nombre: ";
+    cin >> p1_int;
+    cin >> p1_str;
     Libreria li1 = Libreria("calle1", "ciudad1");
     Libreria li2 = Libreria("calle2", "ciudad2");
-    Persona p1 = Persona(19, "Juan");
+    Persona p1 = Persona(p1_int, p1_str);
     Persona p2(15, "Sophia");
-    Libro l1 = Libro(2001, "Renato", "Accion", "Dragonforce");
-    Libro l2(1999, "Maria", "Comedia", "KFC");
-    Libro l3(1999, "Maria", "Comedia", "KFC");
-    Libro l4(1999, "Maria", "Comedia", "KFC");
-    Libro l5(1999, "Maria", "Comedia", "KFC");
-    Libro l6(1999, "Maria", "Comedia", "KFC");
-    Libro l7(1999, "Maria", "Comedia", "KFC");
-    Libro l8(1999, "Maria", "Comedia", "KFC");
-    Libro l9(1999, "Maria", "Comedia", "KFC");
-    Libro l10(1999, "Maria", "Comedia", "KFC");
+    Libro l1 = Libro(2001, "Renato", "Accion", "CSIC");
+    Libro l2(1999, "Maria", "Comedia", "CSIC");
+    Libro l3(1999, "Maria", "Comedia", "CSIC");
+    Libro l4(1999, "Maria", "Comedia", "CSIC");
+    Libro l5(1999, "Maria", "Comedia", "CSIC");
+    Libro l6(1999, "Maria", "Comedia", "CSIC");
+    Libro l7(1999, "Maria", "Comedia", "CSIS");
+    Libro l8(1999, "Maria", "Comedia", "CSIC");
+    Libro l9(1999, "Maria", "Comedia", "CSIC");
+    Libro l10(1999, "Maria", "Comedia", "CSIC");
     li1.sitio();
     li2.lugar();
+    if (p1.edad <= 60){
+        p1.leer();
+        p1.obtener();
+    }
     p1.leer();
     p2.obtener();
     l1.personaje();
