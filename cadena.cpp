@@ -73,10 +73,10 @@ int main()
 bool palindromo_it(char *cadena, char *fin)
 {
     while(fin >= cadena){
-        if(fin != cadena)
+        if(*fin != *cadena)
             return 0;
-        fin++;
-        cadena--;
+        fin--;
+        cadena++;
     }
     return 1;
 }
