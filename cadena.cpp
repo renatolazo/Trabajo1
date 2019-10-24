@@ -70,7 +70,7 @@ int main()
 }*/
 
 
-bool palindromo_it(char *cadena, char *fin)
+/*ool palindromo_it(char *cadena, char *fin)
 {
     while(fin >= cadena){
         if(*fin != *cadena)
@@ -85,4 +85,22 @@ int main()
     char cadena[] = "hoh";
     char *fin = cadena + tam_cad(cadena) - 1;
     cout << palindromo_it(cadena, fin) << endl;
+}*/
+
+bool palindromo_rec(char *cadena1, char *fin1)
+{
+    if(*fin1 == *cadena1){
+        fin1--;
+        cadena1++;
+        palindromo_rec(cadena1, fin1);
+        return 1;
+    }
+    return 0;
+}
+
+int main()
+{
+    char cadena1[] = "reconocer";
+    char *fin1 = cadena1 + tam_cad(cadena1) - 1;
+    cout << palindromo_rec(cadena1, fin1) << endl;
 }
