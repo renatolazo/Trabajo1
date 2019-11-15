@@ -1,73 +1,51 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-class Empleado
+class Estudiante
 {
 private:
-	string nombre;
-	string apellido;
-	double salario;
+    string nombre;
+    string apellido;
+    string codigo;
 public:
-	Empleado(string, string, double);
-	void ObtenerNombre();
-	void ObtenerApellido();
-	double ObtenerSalario();
-	double ObtenerSalarioAnual();
-	double ReducirSalario();
-	double ReducirSalarioAnual();
-	/*void tostring();*/
+    Estudiante(string, string, string);
+    void ObtenerNombre();
+    void ObtenerApellido();
+    void ObtenerCodigo();
 };
 
-Empleado::Empleado(string _nombre, string _apellido, double _salario){
-	nombre = _nombre;
-	apellido = _apellido;
-	salario = _salario;
+Estudiante::Estudiante(string _nombre, string _apellido, string _codigo)
+{
+    nombre = _nombre;
+    apellido = _apellido;
+    codigo = _codigo;
 }
 
-void Empleado::ObtenerNombre(){
+void Estudiante::ObtenerNombre()
+{
     cout << nombre << endl;
 }
 
-void Empleado::ObtenerApellido(){
+void Estudiante::ObtenerApellido()
+{
     cout << apellido << endl;
 }
 
-double Empleado::ObtenerSalario(){
-    cout << salario << endl;
-}
-
-double Empleado::ObtenerSalarioAnual(){
-	cout << salario * 12 << endl;
-}
-
-double Empleado::ReducirSalario(){
-	cout << salario * 0.9 << endl;
-}
-
-double Empleado::ReducirSalarioAnual(){
-	cout << salario*0.9*12 << endl;
+void Estudiante::ObtenerCodigo()
+{
+    cout << codigo << endl;
 }
 
 int main()
 {
-	Empleado e1("Mauricio", "Perez", 500.50);
-	Empleado e2("Fernanda", "Monroy", 800.75);
-	e1.ObtenerNombre();
-	e1.ObtenerApellido();
-	e1.ObtenerSalario();
-	cout << endl;
-	e2.ObtenerNombre();
-	e2.ObtenerApellido();
-	e2.ObtenerSalario();
-	cout << endl;
-	e1.ObtenerSalarioAnual();
-	e2.ObtenerSalarioAnual();
-	cout << endl;
-	e1.ReducirSalario();
-	e2.ReducirSalario();
-	cout << endl;
-	e1.ReducirSalarioAnual();
-	e2.ReducirSalarioAnual();
+    Estudiante e1("Raul", "Lopez", "191-10-45293");
+    Estudiante e2("Diana", "Valencia", "191-10-44607");
+    e1.ObtenerNombre();
+    e1.ObtenerApellido();
+    e1.ObtenerCodigo();
+    cout << endl;
+    e2.ObtenerNombre();
+    e2.ObtenerApellido();
+    e2.ObtenerCodigo();
 }
